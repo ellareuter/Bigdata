@@ -39,7 +39,7 @@ class longest_movie_titles(MRJob):
 		for r in ratings:
 			sum_ratings += int(r)
 			count += 1
-		if count >= self.MIN_COUNT:
+		if count >= self.MIN_COUNT and self.movie_title(movie_id) is not None:
 			yield movie_id, len(self.movie_title(movie_id))
  
  

@@ -8,7 +8,7 @@ class longest_movie_titles(MRJob):
 	SHOW_LIMIT = 10
 
 
-	def longest_title(self, movie_id):
+	def movie_title(self, movie_id):
 		'''
 		Convert from movie id to movie title
 		'''

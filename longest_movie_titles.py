@@ -4,8 +4,9 @@ import csv
 
 class longest_movie_titles(MRJob):
  
-    MIN_COUNT = 10
-    SHOW_LIMIT = 10 
+	MIN_COUNT = 10
+	SHOW_LIMIT = 10
+ 
  
 	def movie_title(self, movie_id):
 		'''
@@ -51,5 +52,6 @@ class longest_movie_titles(MRJob):
 			i += 1
 			if i <= self.SHOW_LIMIT:
 				yield movie_id, (self.movie_title(int(movie_id)), title_length)
+
 if __name__ == '__main__':
 	longest_movie_titles.run()
